@@ -55,7 +55,6 @@ def decode_matrix(coded_graph: str) -> GraphM:
     #vértices * i + j es igual a 1. Regresamos un objeto GraphM.
     """
     order = int(coded_graph[0:8], 2)
-    print(order)
     matrix = []
     for i in range(8, order * (order + 1), order):
         matrix.append([1 if bit == "1" else 0

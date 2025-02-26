@@ -76,7 +76,8 @@ def buscar_camino_euleriano(matriz_adyacencia):
             matriz_adyacencia[siguiente][vertice_actual] = 0
             pila.append(siguiente)
 
-    # Verifique si quedan aristas, lo que indicaría que no hay camino euleriano debido a la falta de conexidad
+    # Verifique si quedan aristas, lo que indicaría que no hay camino euleriano
+    # debido a la falta de conexidad
     if any(sum(fila) > 0 for fila in matriz_adyacencia):
         return None
     return camino
